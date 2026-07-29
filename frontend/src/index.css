@@ -1,0 +1,91 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans antialiased overflow-x-hidden;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom CSS Helpers */
+.glass-panel {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.glass-panel-danger {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.glass-panel-warning {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+}
+
+/* Glowing Indicator Rings */
+.glow-green {
+  box-shadow: 0 0 12px #10b981;
+}
+
+.glow-orange {
+  box-shadow: 0 0 12px #f59e0b;
+}
+
+.glow-red {
+  box-shadow: 0 0 12px #ef4444;
+}
+
+/* Animated Grid Evacuation Warning Map background */
+.grid-bg {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+}
+
+/* Leaflet Map Specific Theme Adjustments for Light Mode */
+.leaflet-container {
+  background: #f0f4f8 !important;
+  font-family: inherit;
+}
+
+/* Ensure tile pane is visible */
+.leaflet-tile-pane {
+  opacity: 1 !important;
+}
+
+/* Make sure leaflet tiles load properly */
+.leaflet-tile {
+  opacity: 1 !important;
+}
+
+/* Ensure map container fills parent properly */
+.leaflet-container img {
+  max-width: none !important;
+}
+
+/* Dark mode tiles filter - REMOVED for light theme */
+.dark-tiles {
+  filter: none;
+}
