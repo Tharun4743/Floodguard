@@ -7,7 +7,6 @@
 
 <p align="center">
   <a href="https://github.com/Tharun4743/Floodguard">📦 <b>Official GitHub Repository</b></a>
-  • <a href="https://floodguard-ai.vercel.app/">🌐 <b>Production Live Demo</b></a>
   
 </p>
 
