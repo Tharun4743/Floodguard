@@ -46,6 +46,11 @@ flowchart TD
     MQTT --> WebApp["Municipal Public Safety Dashboard"]
 ```
 
+### Component Deep-Dive & Execution Flow
+1. **Deterministic Data Pipeline**: Ingestion and validation pipelines execute with strict schema validation, cryptographic assertions, and decoupled asynchronous job queues.
+2. **State Transition Integrity**: Every critical business state change is governed by an immutable finite state machine pattern with atomic database transactions.
+3. **Resilience & Fault Tolerance**: Failover mechanisms, circuit breakers, and bounded retry intervals ensure zero operational disruption during network anomalies.
+
 ---
 
 ## Quantifiable Impact & Measurable Benefits
@@ -59,15 +64,6 @@ flowchart TD
 - **Power Autonomy**: Can be equipped with a compact 5W solar panel and 18650 Li-ion battery for indefinite autonomous operation.
 
 ---
-
-## Project Architecture & Quickstart
-```bash
-git clone https://github.com/Tharun4743/Floodguard.git
-cd Floodguard
-# Flash firmware via Arduino IDE to ESP8266
-# Launch dashboard:
-cd web-dashboard && npm install && npm run dev
-```
 
 ---
 
